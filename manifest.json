@@ -1,0 +1,15 @@
+{
+  "name": "Pwned Passwords Scanner",
+  "version": "1.0",
+  "description": "Extension sniffs on passwords you use on all the websites and checks them on Pwned Passwords database. Please note, that your passwords never really leave your browser. The extension sends first characters of sha256 hash of your passwords to the API.",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["sniffer.js"]
+    }
+  ]
+}
